@@ -1,0 +1,146 @@
+@charset "UTF-8";
+/*!
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+SCSS practice
+recoding
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+*/
+/*!
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+body
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+*/
+body {
+  display: flex;
+  flex: 1;
+  margin: 0 auto;
+  flex-direction: column;
+  background: repeating-linear-gradient(-50deg, #ffffff 0px, #ffffff 10px, #d6b7ff 10px, #d3a3ff 20px); }
+
+/*!
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ヘッダー関連
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+*/
+.header {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  height: 150px;
+  background-color: #e5bdff; }
+  .header h1 {
+    margin: auto;
+    font-size: clamp(12px, 4rem, 36px); }
+
+/*
+!$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+画像関連
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+*/
+.webimg {
+  display: flex;
+  margin-bottom: 2px; }
+  .webimg img {
+    width: clamp(240px, 60vw, 600px);
+    margin: auto;
+    align-items: center; }
+
+/*
+!$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ナビゲーションバー関連
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+*/
+.nav {
+  height: 110px;
+  font-size: 2rem; }
+  .nav ul {
+    display: flex;
+    height: 100%;
+    margin: 0 auto;
+    background-color: aquamarine;
+    list-style: none;
+    padding: 0;
+    flex: 1; }
+    .nav ul li {
+      text-align: center;
+      /* height: 110px;
+      display: block; */
+      margin: auto;
+      padding: 0;
+      width: 20%;
+      flex: 1; }
+      .nav ul li:hover {
+        background-color: #ff00c8;
+        color: #8400ff; }
+      .nav ul li a {
+        margin: auto; }
+  @media screen and (max-width: 890px) {
+    .nav {
+      width: 100%;
+      height: auto; }
+      .nav ul {
+        flex-direction: column; } }
+
+/*
+!$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+メイン関連
+ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+*/
+.main {
+  display: flex;
+  margin-top: 0; }
+  .main h1 {
+    background-color: aqua;
+    border-left: 4px solid #002f96;
+    font-size: clamp(12px, 4rem, 36px); }
+  .main h2 {
+    border: 4px solid #6200ff; }
+
+.leftside {
+  width: 200px;
+  max-width: 250px;
+  min-height: 100vh; }
+
+.center {
+  margin-top: 0;
+  padding-top: 30px;
+  background-color: #ffffff;
+  flex: 1;
+  min-height: 100vh; }
+
+.rigthside {
+  width: 150px;
+  max-width: 200px;
+  min-height: 100vh;
+  background-color: #ffffff; }
+  .rigthside div {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto; }
+
+/*
+!$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+フッター関連
+ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+*/
+.footer {
+  margin: 0;
+  padding: 2px;
+  border-top: 2px solid #002fff;
+  background-color: #ffffff;
+  text-align: center; }
+  .footer ul {
+    display: flex;
+    height: 110px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    flex: 1; }
+    .footer ul li {
+      text-align: center;
+      margin: auto;
+      padding: 0;
+      width: 20%;
+      flex: 1; }
+
+/*# sourceMappingURL=scssstyle.css.map */

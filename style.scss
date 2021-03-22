@@ -1,0 +1,180 @@
+/*!
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+SCSS practice
+recoding
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+*/
+
+/*!
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+body
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+*/
+body{
+    display: flex;
+    flex: 1;
+    margin: 0 auto;
+    flex-direction: column;
+    background: repeating-linear-gradient(-50deg,#ffffff 0px,#ffffff 10px,#d6b7ff 10px,#d3a3ff 20px);
+}
+
+/*!
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ヘッダー関連
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+*/
+$wth:100%;
+$hgt:150px;
+$fnt_max:36px;
+$fnt_min:12px;
+$fnt_mid:4rem;
+.header{
+    display:flex;
+    width: $wth;
+    margin: auto;
+    height: $hgt;
+    background-color: #e5bdff;
+    
+    h1{
+        margin: auto;
+        font-size: clamp($fnt_min,$fnt_mid,$fnt_max);
+    }
+}
+
+/*
+!$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+画像関連
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+*/
+
+.webimg{
+    display:flex;
+    margin-bottom: 2px;
+    img{
+        width: clamp(240px,60vw,600px);
+        margin: auto;
+        align-items: center;
+    }
+}
+
+/*
+!$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ナビゲーションバー関連
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+*/
+$navsize:110px;
+$navhth:100%;
+$maxwdh:890px;
+
+.nav{
+    height: $navsize;
+    font-size: 2rem;
+    ul{
+        display: flex;
+        height: $navhth;
+        margin: 0 auto;
+        background-color: aquamarine; 
+        list-style: none;
+        padding: 0;
+        flex: 1;
+
+        li{
+            text-align: center;
+            /* height: 110px;
+            display: block; */
+            margin: auto;
+            padding: 0;
+            width: 20%;
+            flex: 1;
+
+            &:hover{
+                background-color: rgb(255, 0, 200);
+                color: #8400ff;
+            }
+
+            a{
+                margin: auto;
+            }
+        }
+        
+    }
+    @media screen and (max-width: $maxwdh){
+        width: $wth;
+        height: auto;
+        ul{
+            flex-direction: column;  
+        }
+    }
+}
+
+/*
+!$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+メイン関連
+ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+*/
+
+.main{
+    display: flex;
+    margin-top: 0;
+    h1{
+        background-color: aqua;
+        border-left: 4px solid #002f96;
+        font-size: clamp($fnt_min,$fnt_mid,$fnt_max);
+    }
+    h2{
+        border: 4px solid #6200ff;
+    }
+}
+
+.leftside{
+    width: 200px;
+    max-width: 250px;
+    min-height: 100vh;
+}
+.center{
+    margin-top: 0;
+    padding-top: 30px;
+    background-color: #ffffff;
+    flex: 1;
+    min-height: 100vh;
+}
+.rigthside{
+    width: 150px;
+    max-width: 200px;
+    min-height: 100vh;
+    background-color: #ffffff;
+    div{
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/*
+!$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+フッター関連
+ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+*/
+
+.footer{
+    margin: 0;
+    padding: 2px;
+    border-top:2px solid #002fff;
+    background-color: #ffffff;
+    text-align: center;
+
+    ul{
+        display: flex;
+        height: 110px;
+        margin: 0 auto;
+        list-style: none;
+        padding: 0;
+        flex: 1;
+        li{
+            text-align: center;
+            margin: auto;
+            padding: 0;
+            width: 20%;
+            flex: 1;
+        }
+    }
+}
